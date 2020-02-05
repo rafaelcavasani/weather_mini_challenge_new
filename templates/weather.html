@@ -15,9 +15,9 @@
           <div class="card-body text-center">
             <div class="col-12 text-center">
               {% if ret.need_umbrella == True %}
-                <img src="{% static "image/open_umbrella.jpg" %}" class="img-fluid"/>
+                <img src="{% static "images/open_umbrella.jpg" %}" class="img-fluid"/>
               {% else %} 
-                <img src="{% static "image/closed_umbrella.jpg" %}" class="img-fluid"/>
+                <img src="{% static "images/closed_umbrella.jpg" %}" class="img-fluid"/>
               {% endif %}
             </div>
             <h4 class="card-title text-center text-primary py-2">
@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="col-12 text-center">
-        <a class="btn btn-sm btn-primary mt-4" href="{% url 'home' %}">Home</a>
+        <a class="btn btn-sm btn-primary mt-4" href="{% url 'index' %}">Home</a>
       </div>
     </div>
   </body>

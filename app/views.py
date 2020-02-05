@@ -1,5 +1,5 @@
 from django.views.generic import TemplateView
-from .service import get_weather
+from .service import Weather
 from datetime import datetime
 
 class IndexView(TemplateView):
@@ -16,7 +16,8 @@ class WeatherView(TemplateView):
     template_name = "weather.html"
 
     def get_context_data(self, **kwargs):
-        get_weather()
+        weather = Weather()
+        ret = weather.get_weather()
         context = super().get_context_data(**kwargs)
         context['ret'] = ret
         return context
